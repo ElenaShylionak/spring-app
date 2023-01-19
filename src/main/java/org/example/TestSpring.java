@@ -10,8 +10,12 @@ public class TestSpring {
         Music music = context.getBean("musicBean", Music.class);
 
         //Manual dependency injection (Внедрение зависимостей вручную)
-        MusicPlayer musicPlayer = new MusicPlayer(music);
+        //MusicPlayer musicPlayer = new MusicPlayer(music);
+
+        //DE with constructor (DE при помощи конструктора)
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
         musicPlayer.playMusic();
+
         context.close();
     }
 }
