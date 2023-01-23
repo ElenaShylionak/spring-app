@@ -7,14 +7,15 @@ public class TestSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext
                 ("applicationContext.xml");
 
-        Music music = context.getBean("musicBean", Music.class);
+       //Music music = context.getBean("musicBean", Music.class);
 
         //Manual dependency injection (Внедрение зависимостей вручную)
         //MusicPlayer musicPlayer = new MusicPlayer(music);
 
         //DE with constructor (DE при помощи конструктора)
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        musicPlayer.playMusic();
+
+        musicPlayer.playMusicList();
 
         System.out.println(musicPlayer.getName());
         System.out.println(musicPlayer.getVolume());
