@@ -9,10 +9,12 @@
 
     <bean id="musicBean1"
           class="org.example.RockMusic">
-    </bean>
+            </bean>
 
     <bean id="musicBean2"
-          class="org.example.ClassicalMusic">
+          class="org.example.ClassicalMusic"
+          factory-method="getClassicalMusic">
+
     </bean>
 
     <bean id="musicBean3"
