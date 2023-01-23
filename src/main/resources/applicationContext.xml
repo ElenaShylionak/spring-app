@@ -10,6 +10,9 @@
     <bean id="musicPlayer"
           class="org.example.MusicPlayer">
         <property name="music" ref="musicBean"/>
+
+        <property name="name" value="Media Player"/>
+        <property name="volume" value="50"/>
     </bean>
 
 </beans>

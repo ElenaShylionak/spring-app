@@ -3,6 +3,8 @@ package org.example;
 
 public class MusicPlayer {
     private Music music;  //Common interface
+    private String name; //this name is Player
+    private int volume;
 
     //IoC
     public MusicPlayer(Music music) {  //with arguments
@@ -14,8 +16,26 @@ public class MusicPlayer {
         this.music = music;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) { //this method will use in applicationContext
+        this.name = name;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) { //this method will use in applicationContext
+        this.volume = volume;
+    }
+
     public void playMusic() {
         System.out.println("Playing: " + music.getSong());
+
+
 
     }
 }
