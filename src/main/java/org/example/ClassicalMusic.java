@@ -1,5 +1,8 @@
 package org.example;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music{
 
     private ClassicalMusic() { //create a private constructor. So we are limited to creating objects of this class (new)
